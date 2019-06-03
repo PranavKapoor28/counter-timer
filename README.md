@@ -1,0 +1,2 @@
+#counter
+THIS IS A TIMER COUNTER
