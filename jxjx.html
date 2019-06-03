@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+</style>
+</head>
+<body background="1.jpg" class="container">
+        <div id="formdiv">
+                <h1>Countdown Timer</h1>
+                <h2>Set Date</h2>
+                <input id="myDate" type="date">
+                <button id="btn" onclick="window.initializeClock('clockdiv', 'myDate')">Start</button>
+            </div>
+            <div id="clockdiv"></div>
+            <body class="container">
+                    <table class="countdowncontainer">
+                        <tr class="info1">
+                            <td colspan="4" >Christmas Countdown</td>
+                        </tr>
+                        <tr id="clockId">
+                            <td id="days">120</td>
+                            <td id="hours">4</td>
+                            <td id="minutes"> 40</td>
+                            <td id="seconds"> 30</td>
+                        </tr>
+                    </table>
+    <script>
+    window.initializeClock = function(clockId, dateId) {
+    var getTimeRemaining = function(endtime) {
+        var t = Date.parse(endtime) - (new Date()).getTime();
+        var seconds = Math.floor( (t/1000) % 60 );
+        var minutes = Math.floor( (t/1000/60) % 60);
+        var hours = Math.floor( (t/(1000*60*60)) % 24);
+        var days = Math.floor( t/(1000*60*60*24) );
+        return {
+            'total': t,
+            'days': days,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+        };
+    }
+
+    var deadline = document.getElementById(dateId).value;
+    var timeinterval = setInterval(function(){
+        var t = getTimeRemaining(deadline);
+        document.getElementById("clockId").innerHTML = 'Days: ' + t.days + " |  " + 'Hours: ' +  t.hours + ' | ' + 'Minutes: ' + t.minutes + ' | ' + 'Seconds: ' + t.seconds;
+        if(t.total<=0){
+            clearInterval(timeinterval);
+        }
+    }, 1000);
+}
+    </script>
+</body>
+</html>

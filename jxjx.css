@@ -1,0 +1,51 @@
+.container{
+    background-color: darkgrey;
+    background-size: cover;
+    
+    }
+    .countdowncontainer{
+    background-color: lightgrey;
+    margin-left: 710px;
+    margin-top: 100px;
+    border: 3px solid red;
+    padding: 20px 50px 20px 50px;
+    box-shadow: 20px 40px 104px 80px;
+    border-radius: 60px;
+    }
+    
+    .btn{
+    background-color: red;
+    border: black;
+    }
+    
+    .btn:hover{
+    background-color: yellow;
+    }
+    
+    #formdiv h1{
+    margin-left: 850px;
+    font-size: 50px;
+    color: orange;
+    }
+    
+    #myDate{
+    margin-left: 900px;
+    border: 3px solid green;
+    }
+    
+    #formdiv h2{
+    margin-left: 950px;
+    color: white;
+    font-size: 40px;
+    }
+    
+    .info1{
+    font-size: 50px;
+    color: darkblue;
+    }
+    
+    
+    #clockId{
+    color: red;
+    font-size: 30px;
+    }
