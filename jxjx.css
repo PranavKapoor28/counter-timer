@@ -1,4 +1,4 @@
-.container{
+  .container{
     background-color: darkgrey;
     background-size: cover;
     
@@ -13,12 +13,12 @@
     border-radius: 60px;
     }
     
-    .btn{
+    #btn{
     background-color: red;
     border: black;
     }
     
-    .btn:hover{
+    #btn:hover{
     background-color: yellow;
     }
     
